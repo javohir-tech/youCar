@@ -34,12 +34,25 @@ export default function Filter() {
                             </label>
                         </div>
                     </div>
-                    <div className='d-flex align-itmes-center justify-content-between mt-3'>
+                    <div className='d-flex flex-column flex-lg-row gap-3  align-itmes-center  mt-3'>
 
-                        <Dropdown >
+                        <Dropdown className='text-center dropdown'>
                             <p>Выберите марку</p>
-                            <Dropdown.Toggle className='filter-drapdowns border-0'   id="dropdown-basic">
-                                Dropdown Button
+                            <Dropdown.Toggle className='filter-drapdowns border-0 w-100' id="dropdown-basic">
+                                Gelly
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">BMW</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Audi</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Honda</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown className='text-center dropdown'>
+                            <p>ВЫберите модель</p>
+                            <Dropdown.Toggle className='filter-drapdowns border-0 w-100' id="dropdown-basic">
+                                Monjaro
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
@@ -49,10 +62,23 @@ export default function Filter() {
                             </Dropdown.Menu>
                         </Dropdown>
 
-                        <Dropdown >
-                            <p>Выберите марку</p>
-                            <Dropdown.Toggle className='filter-drapdowns border-0'   id="dropdown-basic">
-                                Dropdown Button
+                        <Dropdown className='text-center dropdown '>
+                            <p>Страна</p>
+                            <Dropdown.Toggle className='filter-drapdowns border-0 w-100' id="dropdown-basic">
+                                Kitay
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">USA</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Italiya</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Russiya</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown className='text-center dropdown'>
+                            <p>Год</p>
+                            <Dropdown.Toggle className='filter-drapdowns border-0 w-100' id="dropdown-basic">
+                                0-2024
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
@@ -62,36 +88,10 @@ export default function Filter() {
                             </Dropdown.Menu>
                         </Dropdown>
 
-                        <Dropdown >
-                            <p>Выберите марку</p>
-                            <Dropdown.Toggle className='filter-drapdowns border-0'   id="dropdown-basic">
-                                Dropdown Button
-                            </Dropdown.Toggle>
-
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-
-                        <Dropdown >
-                            <p>Выберите марку</p>
-                            <Dropdown.Toggle className='filter-drapdowns border-0'   id="dropdown-basic">
-                                Dropdown Button
-                            </Dropdown.Toggle>
-
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-
-                        <Dropdown >
-                            <p>Выберите марку</p>
-                            <Dropdown.Toggle className='filter-drapdowns border-0'   id="dropdown-basic">
-                                Dropdown Button
+                        <Dropdown className='text-center dropdown'>
+                            <p>Цена</p>
+                            <Dropdown.Toggle className='filter-drapdowns border-0 w-100' id="dropdown-basic">
+                                3 000 000-4 500 000
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>

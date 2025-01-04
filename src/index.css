@@ -1,14 +1,18 @@
+@import "rsuite/dist/rsuite.css";
+
+#root{ padding: 10px; }
 /* navbar */
-.social-media a{
+.social-media a {
     text-decoration: none;
     font-size: 18px;
-    svg{
+
+    svg {
         font-size: 18px;
     }
 }
 
-.nav-link{
-    a{
+.nav-link {
+    a {
         text-decoration: none;
         font-weight: 500;
         color: rgba(67, 67, 67, 1);
@@ -17,20 +21,20 @@
     }
 }
 
-.navbar-brand{
+.navbar-brand {
     font-size: 30px !important;
     font-weight: 600 !important;
     line-height: 36px !important;
 }
 
-.navbar-main__link{
+.navbar-main__link {
     font-size: 18px;
     font-weight: 600;
     text-decoration: none;
 }
 
-.avtos{
-    p{
+.avtos {
+    p {
         font-weight: 500;
         font-size: 16px;
         line-height: 18px;
@@ -38,7 +42,7 @@
 }
 
 /* avto katalok sectin  */
-.section-header{
+.section-header {
     font-weight: 500;
     font-size: 30px;
     line-height: 36px;
@@ -68,52 +72,294 @@
 }
 
 /* filter css */
-.filter-btn{
+.filter-btn {
     background-color: rgba(41, 56, 67, 1) !important;
     border-radius: 10px !important;
     color: rgba(244, 244, 244, 1) !important;
 }
 
-.filter-drapdowns{
+.filter-drapdowns {
     background-color: rgba(244, 244, 244, 1) !important;
     color: rgba(90, 90, 90, 1) !important;
 }
 
 /* cars card */
-.cars-card{
+.cars-card {
     border-radius: 10px;
 }
 
-.heart{
+.heart {
     bottom: 10px;
     right: 15px;
+    color: rgba(41, 56, 67, 1);
 }
 
-.car-model{
+.car-model {
     font-weight: 500;
     font-weight: 17px;
     line-height: 18px;
     color: rgba(41, 56, 67, 1);
 }
 
-.car-price{
+.car-price {
     font-weight: 700;
     font-size: 20px;
     line-height: 18px;
     color: rgba(41, 56, 67, 1);
 }
 
-.card-info{
-    p{
+.card-info {
+    p {
         font-weight: 400;
         color: rgba(152, 152, 152, 1);
         line-height: 17px;
     }
 }
 
-@media(max-width:992px){
-    .avtos{
-        background-color: rgba(246, 246, 246, 1) !important;
+/* banner section */
+.banner-section {
+    background-color: rgba(244, 244, 244, 1);
+    margin-top: 100px;
+    padding-bottom: 80px ;
+    h1{
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px; 
+        color: rgba(152, 152, 152, 1);
     }
 }
 
+.banner-section__img {
+    bottom: 0;
+    left: 140px;
+    z-index: 2;
+
+    img {
+        width: 200px;
+        height: 330px;
+        transform: scaleX(-1);
+    }
+}
+
+.banner-lines {
+    width: 50px;
+    height: 200px;
+    background: rgba(38, 132, 229, 1);
+}
+
+.banner-line__one {
+    top: 40px;
+    left: 80px;
+}
+
+.banner-line__two {
+    top: 0px;
+    left: 230px;
+    z-index: 1;
+}
+
+.banner-line__three {
+    top: 40px;
+    left: 350px;
+    z-index: 1;
+}
+
+.banner-img__one {
+    bottom: 1px;
+    right: 100px;
+    z-index: 4;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.banner-img__two {
+    bottom: 6px;
+    right: 160px;
+    z-index: 3;
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.banner-img__three {
+    bottom: 11px;
+    right: 210px;
+    z-index: 2;
+    img {
+        width: 60px;
+        height: 60px;
+    }
+}
+.banner-img__four {
+    bottom: 16px;
+    right: 250px;
+    z-index: 1;
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.banner-section__afisha{
+    bottom: 0;
+    right: 20px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    z-index: 5;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+/* reklam card */
+
+.reklam-card{
+    height: 200px;
+    img{
+        width: 48px;
+        height: 48px;
+    }
+    h2{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: rgba(32, 32, 32, 1);
+    }
+    p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/* addition section*/
+.addition-section{
+    background: linear-gradient(90deg, #3593F3 50.44%, #0C74DF 80.16%);
+    h2{
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 33px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.news-card{
+    a{
+        text-decoration: none;
+        color: rgba(41, 56, 67, 1);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        svg{
+            color: rgba(41, 56, 67, 1);
+        }
+    }
+
+    h3{
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 20px;
+        color: rgba(41, 56, 67, 1);
+    }
+    p{
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 17px;
+        color: rgba(152, 152, 152, 1);
+    }
+}
+
+/* footer*/
+
+.footer-header{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.under-text{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.footer{
+    h2{
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;
+        color: rgba(41, 56, 67, 1);
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    li{
+        a{
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 17px;
+            color: rgba(90, 90, 90, 1);
+        }
+    }
+}
+.dropdown{
+    width: 20%;
+}
+
+
+
+@media(max-width:992px) {
+    .avtos {
+        background-color: rgba(246, 246, 246, 1) !important;
+    }
+
+    .banner-section{
+        padding-bottom: 200px;   
+    }
+
+    .banner-section__img{
+        left: 35%;
+        img{
+            width: 150px;
+            height: 200px; 
+        }
+    }
+
+    .banner-lines {
+        width: 40px;
+        height: 120px;
+    }
+
+    .banner-line__one {
+        top: 380px;
+        left: 80px;
+    }
+
+    .banner-line__two {
+        top: 320px;
+        left: 50%;
+    }
+
+    .banner-line__three {
+        top: 340px;
+        left: 80%;
+    }
+    .dropdown{
+        width: 100%;
+    }
+
+
+}

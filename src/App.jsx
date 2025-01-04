@@ -7,7 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //mainLayout
 import MainLayout from './Layout/MainLayout';
-import { About, Contact, Home, Katalok, News } from './Pages';
+import { About, Contact, Home, Katalok, News, SingleCar } from './Pages';
+
+//actions
+// import { action as HomeAction } from './Pages/Home';
 
 function App() {
 
@@ -18,23 +21,28 @@ function App() {
       children: [
         {
           index: true,
-          element: <Home/>
+          element: <Home />,
+          // action:  HomeAction
         },
         {
-          path:"/katalok",
-          element:<Katalok/>
+          path: "/katalok",
+          element: <Katalok />
         },
         {
-          path:"/about",
-          element:<About/>
+          path: "/about",
+          element: <About />
         },
         {
-          path:"/news",
-          element:<News/>
+          path: "/news",
+          element: <News />
         },
         {
-          path:"Contact",
-          element:<Contact/>
+          path: "Contact",
+          element: <Contact />
+        },
+        {
+          path: "/singlecar/:id",
+          element: <SingleCar />
         }
       ]
     }
