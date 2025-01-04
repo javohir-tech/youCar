@@ -19,7 +19,7 @@ export default function Footer() {
                         <p className='under-line'>© 1-й автоброкерВнесём качественные изменения в Вашу жизнь!</p>
                     </div>
                     <div className="col-md-9 row">
-                        <div className="col-6 col-md-4">
+                        <div className="col-6 col-md-3">
                             <h2>Компания</h2>
                             <ul>
                                 <li><Link to="/">Компания</Link></li>
@@ -39,9 +39,9 @@ export default function Footer() {
                                 <li><Link to="">Из Кореи</Link></li>
                             </ul>
                         </div>
-                        <div className=" col-md-3">
+                        <div className=" col-md-5">
                             <h2>Марки</h2>
-                            <div className='d-flex gap-4'>
+                            <div className='d-flex gap-3'>
                                 <ul>
                                     <li><Link to="">Audi </Link></li>
                                     <li><Link to="">Aston Martin </Link></li>
