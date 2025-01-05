@@ -4,7 +4,7 @@ import { Button, Container } from 'react-bootstrap'
 //components
 import { Addition, Banner, CarsCard, Comments, Filter, Marks, NewsSection, ReklamCard, SwiperCom } from '../Components'
 import { useFetch } from '../Hooks/useFetch'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 //images
 import key from '../assets/Vector.png'
@@ -27,12 +27,32 @@ export default function Home() {
   // const searchParamFromAction = useActionData()
 
   const { data, isPending, error } = useFetch(`https://api.youcarrf.ru/cars`)
+  const [filters, setFilters] = useState({
+    color: '',
+    country: '',
+    year: '',
+    cost: '',
+    mark: '',
+    model: '',
+  });
+
+  const [filteredCars, setFilteredCars] = useState([]);
 
   useEffect(() => {
     if (data) {
-      console.log(data)
+      const filtered = data.filter(car => {
+        return (
+          (filters.color === '' || car.color === filters.color) &&
+          (filters.country === '' || car.country === filters.country) &&
+          (filters.year === '' || car.year === Number(filters.year)) &&
+          (filters.cost === '' || car.cost <= Number(filters.cost)) &&
+          (filters.mark === '' || car.mark === filters.mark) &&
+          (filters.model === '' || car.model === filters.model)
+        );
+      });
+      setFilteredCars(filtered);
     }
-  }, [data])
+  }, [data, filters]);
 
   if (isPending) {
     return <div>
@@ -58,14 +78,14 @@ export default function Home() {
       </section>
 
       {/* filter */}
-      <Filter />
+      <Filter filters={filters} setFilters={setFilters}/>
 
       <section className='avto-katalok my-3'>
         <h2 className='section-header'>АВТОМОБИЛЬНЫЙ КАТАЛОГ</h2>
 
         <div className="row g-2">
           {
-            data && data.map((car) => {
+             filteredCars && filteredCars.map((car) => {
               const { id } = car
               return <div key={id} className='col-lg-3 col-md-6'>
                 <CarsCard carData={car} />

@@ -82,6 +82,11 @@
     color: rgba(90, 90, 90, 1) !important;
 }
 
+.activeBtn{
+    border-radius: 10px;
+    background-color: rgba(244, 244, 244, 1);
+}
+
 /* cars card */
 .cars-card {
     border-radius: 10px;
