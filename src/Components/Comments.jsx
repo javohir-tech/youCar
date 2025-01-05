@@ -14,7 +14,7 @@ const Comments = () => {
         AOS.init({
             duration: 1000,
             easing: 'ease-in-out',
-            once: false,
+            once: true,
             offset: 200,     // Animatsiya boshlanishigacha 200px masofa
             delay: 50,
         }); // Animatsiya davomiyligi (ms)
