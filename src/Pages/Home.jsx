@@ -16,6 +16,10 @@ import carBig from '../assets/carBIg.png'
 //Loader ...
 import { Loader, Placeholder } from 'rsuite'
 
+//AOS animation
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+
 //action
 // export const action = async ({ request }) => {
 //   const formData = await request.formData()
@@ -86,6 +90,16 @@ export default function Home() {
     }
   }, [data, filters]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: false,
+      offset: 200,     // Animatsiya boshlanishigacha 200px masofa
+      delay: 50,
+    }); // Animatsiya davomiyligi (ms)
+  }, []);
+
   if (isPending) {
     return <div>
       <Placeholder.Paragraph rows={8} />
@@ -120,7 +134,8 @@ export default function Home() {
           {
             filteredCars.map((car) => {
               const { id } = car
-              return <div key={id} className='col-lg-3 col-md-6'>
+              return <div key={id} data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom" className='col-lg-3 col-md-6'>
                 <CarsCard carData={car} />
               </div>
             })
@@ -132,25 +147,25 @@ export default function Home() {
       <section className='reklam-section my-5'>
         <h1 className='section-header'>Почему мы?</h1>
         <div className='row g-2'>
-          <div className='col-md-6 col-lg-3'>
+          <div className='col-md-6 col-lg-3' data-aos="fade-up">
             <ReklamCard
               img={key}
               header={"Работаем под ключ"}
               description={"У нас вы можете приобрести автомобиль напрямую у официального автодилера, без посредников и переводчиков."} />
           </div>
-          <div className='col-md-6 col-lg-3'>
+          <div className='col-md-6 col-lg-3' data-aos="fade-down">
             <ReklamCard
               img={message}
               header={"онлайн-чат 24/7"}
               description={"Мы всегда на связи, чтобы ответить на ваши вопросы и помочь вам с выбором."} />
           </div>
-          <div className='col-md-6 col-lg-3'>
+          <div className='col-md-6 col-lg-3' data-aos="fade-up">
             <ReklamCard
               img={car}
               header={"Упрощенный выбор авто"}
               description={"мы создали этот сайт, чтобы сделать поиск автомобиля по вашим критериям максимально простым и удобным."} />
           </div>
-          <div className='col-md-6 col-lg-3'>
+          <div className='col-md-6 col-lg-3' data-aos="fade-down">
             <ReklamCard
               img={carBig}
               header={"Доставка"}

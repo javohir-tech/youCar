@@ -1,7 +1,26 @@
-import React from 'react';
+//style
 import './reviews.css';
 
+//AOS animation
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+
+//react
+import { useEffect } from 'react';
+
 const Comments = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,
+            offset: 200,     // Animatsiya boshlanishigacha 200px masofa
+            delay: 50,
+        }); // Animatsiya davomiyligi (ms)
+    }, []);
+
+
     const reviews = [
         {
             id: 1,
@@ -26,7 +45,8 @@ const Comments = () => {
 
     return (
         <div className='row '>
-            <div className="reviews-container col-md-6 col-lg-4">
+            <div className="reviews-container col-md-6 col-lg-4" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
                 {reviews.map(review => (
                     <div key={review.id} className="review-card">
                         <div className="review-header">
@@ -47,7 +67,8 @@ const Comments = () => {
                     </div>
                 ))}
             </div>
-            <div className="reviews-container col-md-6 col-lg-4">
+            <div className="reviews-container col-md-6 col-lg-4" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
                 {reviews.map(review => (
                     <div key={review.id} className="review-card">
                         <div className="review-header">
@@ -68,7 +89,8 @@ const Comments = () => {
                     </div>
                 ))}
             </div>
-            <div className="reviews-container col-md-6 col-lg-4">
+            <div className="reviews-container col-md-6 col-lg-4" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
                 {reviews.map(review => (
                     <div key={review.id} className="review-card">
                         <div className="review-header">

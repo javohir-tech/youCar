@@ -1,20 +1,31 @@
-import React, { useEffect } from 'react'
+//react
+import { useEffect } from 'react'
+
+//custom hooks 
 import { useFetch } from '../Hooks/useFetch'
+
+//AOS animation
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 export default function Marks() {
     const { data } = useFetch("https://api.youcarrf.ru/marks")
 
 
-    // useEffect(()=>{
-    //     if(data){
-    //         console.log(data)
-    //     }
-    // }, [data])
+    useEffect(() => {
+        AOS.init({
+          duration: 1000,
+          easing: 'ease-in-out',
+          once: false,
+          offset: 200,     // Animatsiya boshlanishigacha 200px masofa
+          delay: 50,
+        }); // Animatsiya davomiyligi (ms)
+      }, []);
     return (
         <section className='marks-section my-5'>
             <div className="row p-2">
                 {data && data.map((mark) => {
-                    return <div key={mark.id} className='col-6 col-md-4 col-lg-2 p-0'>
+                    return <div key={mark.id} data-aos="fade-up" className='col-6 col-md-4 col-lg-2 p-0'>
                         <img src={mark.image} className='img-fluid w-100' alt="" />
                     </div>
                 })}
