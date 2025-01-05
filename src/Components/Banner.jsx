@@ -17,7 +17,7 @@ export default function Banner() {
 
     useEffect(() => {
         AOS.init({
-          duration: 1000,
+          duration: 900,
           easing: 'ease-in-out',
           once: true,
           offset: 200,     // Animatsiya boshlanishigacha 200px masofa

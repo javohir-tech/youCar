@@ -14,7 +14,7 @@ import { useEffect } from 'react';
 export default function Addition() {
     useEffect(() => {
         AOS.init({
-            duration: 1000,
+            duration: 900,
             easing: 'ease-in-out',
             once: true,
             offset: 200,     // Animatsiya boshlanishigacha 200px masofa
