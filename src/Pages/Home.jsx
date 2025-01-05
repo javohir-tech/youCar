@@ -11,7 +11,9 @@ import key from '../assets/Vector.png'
 import message from '../assets/message.png'
 import car from '../assets/car.png'
 import carBig from '../assets/carBIg.png'
-import { useActionData } from 'react-router-dom'
+
+
+//Loader ...
 import { Loader, Placeholder } from 'rsuite'
 
 //action
@@ -37,6 +39,36 @@ export default function Home() {
   });
 
   const [filteredCars, setFilteredCars] = useState([]);
+  // const [yuklanmoqda, setYuklanmoqda] = useState(false)
+
+  // const fetchFilteredData = async () => {
+  //   setYuklanmoqda(true);
+  //   try {
+  //     const response = await fetch('https://api.youcarrf.ru/cars/cars-filter', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(filters),
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error('Serverda xatolik yuz berdi');
+  //     }
+
+  //     const data = await response.json();
+  //     setFilteredCars(data);
+  //   } catch (err) {
+  //     console.log(err.message);
+  //   } finally {
+  //     setYuklanmoqda(false);
+  //     console.log("oxshadi")
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   fetchFilteredData();
+  // }, [filters]);
 
   useEffect(() => {
     if (data) {
@@ -78,14 +110,15 @@ export default function Home() {
       </section>
 
       {/* filter */}
-      <Filter filters={filters} setFilters={setFilters}/>
+      <Filter filters={filters} setFilters={setFilters} />
 
       <section className='avto-katalok my-3'>
         <h2 className='section-header'>АВТОМОБИЛЬНЫЙ КАТАЛОГ</h2>
 
         <div className="row g-2">
+          {/* {yuklanmoqda && <p>Loading ...</p>} */}
           {
-             filteredCars && filteredCars.map((car) => {
+            filteredCars.map((car) => {
               const { id } = car
               return <div key={id} className='col-lg-3 col-md-6'>
                 <CarsCard carData={car} />
