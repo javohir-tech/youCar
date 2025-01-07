@@ -15,9 +15,9 @@ const Comments = () => {
             duration: 900,
             easing: 'ease-in-out',
             once: true,
-            offset: 200,     // Animatsiya boshlanishigacha 200px masofa
+            offset: 200,   
             delay: 50,
-        }); // Animatsiya davomiyligi (ms)
+        });
     }, []);
 
 

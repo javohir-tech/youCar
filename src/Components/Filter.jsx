@@ -14,21 +14,21 @@ export default function Filter({ filters, setFilters }) {
     const handleModelChange = (value) => {
         setFilters(prev => ({
             ...prev,
-            model: value,  // Tanlangan markani filters'ga qo'shish
+            model: value,  
         }));
     };
 
     const handleCountryChange = (value) => {
         setFilters(prev => ({
             ...prev,
-            country: value,  // Tanlangan markani filters'ga qo'shish
+            country: value,
         }));
     };
 
     const handleYearChange = (value) => {
         setFilters(prev => ({
             ...prev,
-            year: value,  // Tanlangan markani filters'ga qo'shish
+            year: value, 
         }));
     };
 
